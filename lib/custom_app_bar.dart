@@ -5,7 +5,7 @@ class CustomAppBar extends AppBar {
       : super(
           key: key,
           title: const Text("Apprendre les tests"),
-          leading: const Icon(Icons.flutter_dash_rounded,size: 50,),
+          leading: Image.asset('images/androiddummy.png'),
     actions: [
       Icon(Icons.connected_tv_sharp),
       SizedBox(width: 10,),

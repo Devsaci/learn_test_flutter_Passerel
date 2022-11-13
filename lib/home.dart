@@ -16,15 +16,20 @@ class _HomeState extends State<Home> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text("Apprendre les tests"),
-            SizedBox(height: 20),
             SizedBox(
-                height: 400,
-                width: 300,
-                child: Image(
-                    image: NetworkImage(
-                        'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg')))
+              height: 200,
+              width: 200,
+              child: Image(
+                image: NetworkImage(
+                    'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'),
+              ),
+            ),
+            SizedBox(
+                height: 200,
+                width: 200,
+                child: Image.asset('images/androiddummy.png'))
           ],
         ),
       ),
