@@ -5,5 +5,6 @@ class CustomAppBar extends AppBar {
       : super(
           key: key,
           title: const Text("Apprendre les tests"),
+          leading: Image.asset('images/androiddummy.png'),
         );
 }
