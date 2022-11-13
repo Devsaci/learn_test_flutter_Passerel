@@ -13,6 +13,21 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text("Apprendre les tests"),
+            SizedBox(height: 20),
+            SizedBox(
+                height: 400,
+                width: 300,
+                child: Image(
+                    image: NetworkImage(
+                        'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg')))
+          ],
+        ),
+      ),
     );
   }
 }
