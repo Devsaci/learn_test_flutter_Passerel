@@ -32,6 +32,10 @@
 /build/
 
 # Web related
+*.iml
+*.ipr
+*.iws
+.idea/
 lib/generated_plugin_registrant.dart
 
 # Symbolication related
