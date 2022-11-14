@@ -15,6 +15,7 @@ class _HomeState extends State<Home> {
   List<Item> items = [
     Item(name: "Unit Testing"),
     Item(name: "Widget Testing"),
+    Item(name: "Integration testing")
   ];
 
   @override
