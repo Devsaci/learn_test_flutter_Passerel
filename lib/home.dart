@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
             const Text("Apprendre les tests"),
             TextField(
               controller: controller,
+              decoration: const InputDecoration(hintText: "Entrez un élément à ajouter"),
             ),
             const SizedBox(
               height: 200,
