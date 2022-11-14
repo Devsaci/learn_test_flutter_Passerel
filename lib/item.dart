@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 
 class Item {
   String name;
+  bool isChecked = false;
 
-  Item(this.name);
+  Item({required this.name});
+
+  updateCheck() {
+    isChecked = !isChecked;
+  }
 }
