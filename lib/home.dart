@@ -9,6 +9,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  late TextEditingController controller;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-                height: 200,
+                height: 400,
                 width: 200,
                 child: Image.asset('images/androiddummy.png'))
           ],
