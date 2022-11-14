@@ -10,4 +10,8 @@ class Item {
   updateCheck() {
     isChecked = !isChecked;
   }
+
+  Color setColor(){
+    return (isChecked) ? Colors.green : Colors.deepOrange;
+  }
 }
