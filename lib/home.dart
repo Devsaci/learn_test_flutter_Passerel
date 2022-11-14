@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   late TextEditingController controller;
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,9 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("Apprendre les tests"),
-            const TextField(),
+            TextField(
+              controller: controller,
+            ),
             const SizedBox(
               height: 200,
               width: 200,
