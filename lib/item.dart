@@ -12,4 +12,8 @@ class Item {
   }
 
   Color setColor() => (isChecked) ? Colors.green : Colors.deepOrange;
+
+  IconData setIcon() {
+    return Icons.check_box;
+  }
 }
