@@ -12,7 +12,9 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   late TextEditingController controller;
-  List<Item> items = [];
+  List<Item> items = [
+    Item(name: "Unit Testing"),
+  ];
 
   @override
   void initState() {
