@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_passerel/custom_app_bar.dart';
 
+import 'item.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -10,17 +12,20 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   late TextEditingController controller;
+  List<Item> items = [];
 
-@override
+  @override
   void initState() {
-   controller = TextEditingController();
+    controller = TextEditingController();
     super.initState();
   }
+
   @override
   void dispose() {
-   controller.dispose();
+    controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +37,8 @@ class _HomeState extends State<Home> {
             const Text("Apprendre les tests"),
             TextField(
               controller: controller,
-              decoration: const InputDecoration(hintText: "Entrez un élément à ajouter"),
+              decoration: const InputDecoration(
+                  hintText: "Entrez un élément à ajouter"),
             ),
             const SizedBox(
               height: 200,
