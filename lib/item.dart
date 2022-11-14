@@ -11,7 +11,5 @@ class Item {
     isChecked = !isChecked;
   }
 
-  Color setColor(){
-    return (isChecked) ? Colors.green : Colors.deepOrange;
-  }
+  Color setColor() => (isChecked) ? Colors.green : Colors.deepOrange;
 }
