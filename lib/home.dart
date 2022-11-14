@@ -19,8 +19,9 @@ class _HomeState extends State<Home> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Apprendre les tests"),
-            SizedBox(
+            const Text("Apprendre les tests"),
+            const TextField(),
+            const SizedBox(
               height: 200,
               width: 200,
               child: Image(
