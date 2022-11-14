@@ -11,7 +11,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   late TextEditingController controller;
 
-
+@override
+  void initState() {
+   controller = TextEditingController();
+    super.initState();
+  }
+  @override
+  void dispose() {
+   controller.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +42,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-                height: 400,
+                height: 200,
                 width: 200,
                 child: Image.asset('images/androiddummy.png'))
           ],
