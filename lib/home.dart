@@ -14,6 +14,7 @@ class _HomeState extends State<Home> {
   late TextEditingController controller;
   List<Item> items = [
     Item(name: "Unit Testing"),
+    Item(name: "Widget Testing"),
   ];
 
   @override
