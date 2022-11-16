@@ -54,11 +54,7 @@ class _HomeState extends State<Home> {
                 return CustomTile(
                   item: items[index],
                   index: index,
-                  update: (index) {
-                    setState(() {
-                      items[index].updateCheck();
-                    });
-                  },
+                  update: update,
                   dismiss: (value) {},
                 );
               },
@@ -69,4 +65,10 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+
+  update(index) {
+      setState(() {
+        items[index].updateCheck();
+      });
+    }
 }
