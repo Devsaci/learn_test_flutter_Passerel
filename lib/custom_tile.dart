@@ -24,9 +24,10 @@ class CustomTile extends StatelessWidget {
   }
 
   TextStyle style() {
-    return const TextStyle(
+    return  TextStyle(
+      color: item.setColor(),
       fontSize: 17,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w700,
       fontStyle: FontStyle.italic,
     );
   }
