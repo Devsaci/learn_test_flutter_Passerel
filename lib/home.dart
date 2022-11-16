@@ -55,11 +55,7 @@ class _HomeState extends State<Home> {
                   item: items[index],
                   index: index,
                   update: update,
-                  dismiss: (index) {
-                    setState(() {
-                      items.removeAt(index);
-                    });
-                  },
+                  dismiss: dismiss,
                 );
               },
               itemCount: items.length,
@@ -70,9 +66,15 @@ class _HomeState extends State<Home> {
     );
   }
 
+  dismiss(index) {
+    setState(() {
+      items.removeAt(index);
+    });
+  }
+
   update(index) {
-      setState(() {
-        items[index].updateCheck();
-      });
-    }
+    setState(() {
+      items[index].updateCheck();
+    });
+  }
 }
