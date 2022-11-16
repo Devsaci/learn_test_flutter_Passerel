@@ -26,6 +26,10 @@ class CustomTile extends StatelessWidget {
           (index + 1).toString(),
           style: style(),
         ),
+        trailing: IconButton(
+          onPressed: () {}, 
+          icon: Icon(item.setIcon()),
+        ),
       ),
     );
   }
