@@ -29,7 +29,7 @@ class CustomTile extends StatelessWidget {
           style: style(),
         ),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: update(index),
           icon: Icon(item.setIcon()),
         ),
       ),
