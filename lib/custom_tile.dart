@@ -6,11 +6,13 @@ import 'item.dart';
 class CustomTile extends StatelessWidget {
   Item item;
   int index;
+  final Function(int) update;
 
   CustomTile({
     Key? key,
     required this.item,
     required this.index,
+    required this.update,
   }) : super(key: key);
 
   @override
@@ -27,7 +29,7 @@ class CustomTile extends StatelessWidget {
           style: style(),
         ),
         trailing: IconButton(
-          onPressed: () {}, 
+          onPressed: () {},
           icon: Icon(item.setIcon()),
         ),
       ),
