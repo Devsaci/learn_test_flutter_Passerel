@@ -22,7 +22,10 @@ class CustomTile extends StatelessWidget {
           item.name,
           style: style(),
         ),
-        leading: Text((index +1).toString()),
+        leading: Text(
+          (index + 1).toString(),
+          style: style(),
+        ),
       ),
     );
   }
