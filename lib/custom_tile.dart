@@ -22,12 +22,16 @@ class CustomTile extends StatelessWidget {
     return Dismissible(
       key: UniqueKey(),
       direction: DismissDirection.endToStart,
-      onDismissed: dismiss(index),
+      onDismissed: (direction){
+        dismiss(index);
+      },
       child: ListTile(
         title: Text(item.name, style: style()),
         leading: Text((index + 1).toString(), style: style()),
         trailing:
-            IconButton(onPressed: update(index), icon: Icon(item.setIcon())),
+            IconButton(onPressed: (){
+              update(index);
+            }, icon: Icon(item.setIcon())),
       ),
     );
   }
