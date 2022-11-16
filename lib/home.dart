@@ -34,30 +34,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("Apprendre les tests"),
-            TextField(
-              controller: controller,
-              decoration: const InputDecoration(
-                  hintText: "Entrez un élément à ajouter"),
-            ),
-            const SizedBox(
-              height: 200,
-              width: 200,
-              child: Image(
-                image: NetworkImage(
-                    'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'),
-              ),
-            ),
-            SizedBox(
-                height: 200,
-                width: 200,
-                child: Image.asset('images/androiddummy.png'))
-          ],
-        ),
+      body: Column(
+        children: [
+          const Text("Apprendre les tests"),
+          const SizedBox(height: 50,),
+          TextField(
+            controller: controller,
+            decoration: const InputDecoration(
+                hintText: "Entrez un élément à ajouter"),
+          ),
+        ],
       ),
     );
   }
