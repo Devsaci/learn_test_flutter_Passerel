@@ -33,6 +33,7 @@ class CustomTile extends StatelessWidget {
           icon: Icon(item.setIcon()),
         ),
       ),
+      direction: DismissDirection.endToStart,
     );
   }
 
