@@ -37,12 +37,21 @@ class _HomeState extends State<Home> {
       body: Column(
         children: [
           const Text("Apprendre les tests"),
-          const SizedBox(height: 50,),
+          const SizedBox(height: 50),
           TextField(
             controller: controller,
-            decoration: const InputDecoration(
-                hintText: "Entrez un élément à ajouter"),
+            decoration:
+                const InputDecoration(hintText: "Entrez un élément à ajouter"),
           ),
+          const SizedBox(height: 50),
+          Flexible(
+            child: ListView.builder(
+              itemBuilder: (BuildContext context, int index) {
+                return const Text('Item');
+              },
+              itemCount: 5,
+            ),
+          )
         ],
       ),
     );
