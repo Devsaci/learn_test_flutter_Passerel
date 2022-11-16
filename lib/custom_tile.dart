@@ -16,7 +16,9 @@ class CustomTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ListTile(
-      title: Text(item.name),
+      title: Text(item.name, style: style(),),
     );
   }
+
+   style() {}
 }
