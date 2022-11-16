@@ -39,10 +39,13 @@ class _HomeState extends State<Home> {
         children: [
           const Text("Apprendre les tests"),
           const SizedBox(height: 50),
-          TextField(
-            controller: controller,
-            decoration:
-                const InputDecoration(hintText: "Entrez un élément à ajouter"),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: TextField(
+              controller: controller,
+              decoration:
+                  const InputDecoration(hintText: "Entrez un élément à ajouter"),
+            ),
           ),
           const SizedBox(height: 50),
           Flexible(
