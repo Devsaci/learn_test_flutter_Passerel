@@ -15,10 +15,19 @@ class CustomTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ListTile(
-      title: Text(item.name, style: style(),),
+    return ListTile(
+      title: Text(
+        item.name,
+        style: style(),
+      ),
     );
   }
 
-   style() {}
+  TextStyle style() {
+    return const TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.italic,
+    );
+  }
 }
