@@ -55,7 +55,11 @@ class _HomeState extends State<Home> {
                   item: items[index],
                   index: index,
                   update: update,
-                  dismiss: (value) {},
+                  dismiss: (index) {
+                    setState(() {
+                      items.removeAt(index);
+                    });
+                  },
                 );
               },
               itemCount: items.length,
