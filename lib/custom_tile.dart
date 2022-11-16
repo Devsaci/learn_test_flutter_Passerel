@@ -19,21 +19,13 @@ class CustomTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dismissible(
       key: UniqueKey(),
-      child: ListTile(
-        title: Text(
-          item.name,
-          style: style(),
-        ),
-        leading: Text(
-          (index + 1).toString(),
-          style: style(),
-        ),
-        trailing: IconButton(
-          onPressed: update(index),
-          icon: Icon(item.setIcon()),
-        ),
-      ),
       direction: DismissDirection.endToStart,
+      child: ListTile(
+        title: Text(item.name, style: style()),
+        leading: Text((index + 1).toString(), style: style()),
+        trailing:
+            IconButton(onPressed: update(index), icon: Icon(item.setIcon())),
+      ),
     );
   }
 
