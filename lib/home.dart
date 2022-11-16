@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_passerel/custom_app_bar.dart';
+import 'package:flutter_test_passerel/custom_tile.dart';
 
 import 'item.dart';
 
@@ -47,7 +48,10 @@ class _HomeState extends State<Home> {
           Flexible(
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
-                return const Text('CustomTile(items)');
+                return  CustomTile(
+                  item: items[index],
+                  index: index,
+                );
               },
               itemCount: items.length,
             ),
