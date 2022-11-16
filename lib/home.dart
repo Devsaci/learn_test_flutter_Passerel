@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
               itemBuilder: (BuildContext context, int index) {
                 return  CustomTile(
                   item: items[index],
-                  index: index,
+                  index: index, update: (value ) {  },
                 );
               },
               itemCount: items.length,
