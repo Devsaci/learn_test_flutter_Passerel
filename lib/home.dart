@@ -47,9 +47,9 @@ class _HomeState extends State<Home> {
           Flexible(
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
-                return const Text('Item');
+                return const Text('CustomTile(items)');
               },
-              itemCount: 5,
+              itemCount: items.length,
             ),
           )
         ],
