@@ -7,12 +7,14 @@ class CustomTile extends StatelessWidget {
   Item item;
   int index;
   final Function(int) update;
+  final Function(int) dismiss;
 
   CustomTile({
     Key? key,
     required this.item,
     required this.index,
     required this.update,
+    required this.dismiss,
   }) : super(key: key);
 
   @override
@@ -20,6 +22,7 @@ class CustomTile extends StatelessWidget {
     return Dismissible(
       key: UniqueKey(),
       direction: DismissDirection.endToStart,
+      onDismissed: dismiss(index),
       child: ListTile(
         title: Text(item.name, style: style()),
         leading: Text((index + 1).toString(), style: style()),

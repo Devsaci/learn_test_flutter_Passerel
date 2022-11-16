@@ -43,17 +43,19 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.all(20.0),
             child: TextField(
               controller: controller,
-              decoration:
-                  const InputDecoration(hintText: "Entrez un élément à ajouter"),
+              decoration: const InputDecoration(
+                  hintText: "Entrez un élément à ajouter"),
             ),
           ),
           const SizedBox(height: 50),
           Flexible(
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
-                return  CustomTile(
+                return CustomTile(
                   item: items[index],
-                  index: index, update: (value ) {  },
+                  index: index,
+                  update: (value) {},
+                  dismiss: (value) {},
                 );
               },
               itemCount: items.length,
