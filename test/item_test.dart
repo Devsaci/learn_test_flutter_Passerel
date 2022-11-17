@@ -4,7 +4,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 
 main() {
-  String name = "Test d'un Item";
-
-  test('Construction d\'un Objet Item', () {});
+  test('Construction d\'un Objet Item', () {
+    String name = "Test d'un Item";
+    Item item = Item(name: name);
+  });
 }
