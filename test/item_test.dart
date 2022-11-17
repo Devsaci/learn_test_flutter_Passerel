@@ -7,5 +7,6 @@ main() {
     String name = "Test d'un Item";
     Item item = Item(name: name);
     expect(item.name, name);
+    expect(item.isChecked, false);
   });
 }
