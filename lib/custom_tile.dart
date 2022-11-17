@@ -34,6 +34,12 @@ class CustomTile extends StatelessWidget {
             },
             icon: Icon(item.setIcon())),
       ),
+      background: Container(
+        color: Colors.deepOrangeAccent,
+        padding: const EdgeInsets.all(10),
+        child: const Text("Supprimer",
+            style: TextStyle(color: Colors.white), textAlign: TextAlign.end),
+      ),
     );
   }
 
