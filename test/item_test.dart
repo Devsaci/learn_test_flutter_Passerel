@@ -7,6 +7,6 @@ main() {
   test('Construction d\'un Objet Item', () {
     String name = "Test d'un Item";
     Item item = Item(name: name);
-
+    expect(item.name, name);
   });
 }
