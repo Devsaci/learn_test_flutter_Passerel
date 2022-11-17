@@ -68,16 +68,21 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          if (controller.text != "") {
-            setState(() {
-              final item = Item(name: controller.text);
-              controller.text = "";
-            });
-          }
+          add();
         },
         child: const Icon(Icons.add),
       ),
     );
+  }
+
+  void add() {
+    if (controller.text != "") {
+      setState(() {
+        final item = Item(name: controller.text);
+        controller.text = "";
+        items.add(item);
+      });
+    }
   }
 
   dismiss(index) {
