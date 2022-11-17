@@ -53,6 +53,7 @@ class _HomeState extends State<Home> {
           Flexible(
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
+                const Key key = Key("TestKey");
                 return CustomTile(
                   item: items[index],
                   index: index,
@@ -65,6 +66,7 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
+
     );
   }
 
