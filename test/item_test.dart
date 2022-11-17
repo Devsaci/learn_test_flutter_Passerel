@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 main() {
   test('Construction d\'un Objet Item', () {
     String name = "Test d'un Item";
-    Item item = Item(name: name);
+    Item item = Item(name: "name");
     expect(item.name, name);
     expect(item.isChecked, false);
   });
