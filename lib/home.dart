@@ -37,8 +37,10 @@ class _HomeState extends State<Home> {
       appBar: CustomAppBar(),
       body: Column(
         children: [
-          const Text("Apprendre les tests"),
-          const SizedBox(height: 50),
+          const Padding(
+            padding: EdgeInsets.only(top: 20),
+            child: Text("Apprendre les tests  Flutter"),
+          ),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: TextField(
