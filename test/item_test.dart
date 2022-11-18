@@ -35,4 +35,6 @@ main() {
     item.updateCheck();
     expect(item.setColor(), Colors.green);
   });
+
+  test('Test Icon', () {});
 }
