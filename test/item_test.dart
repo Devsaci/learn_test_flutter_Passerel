@@ -31,6 +31,7 @@ main() {
   test('Test couleur', () {
     Item item = newItem();
     expect(item.setColor(), Colors.deepOrange);
+
     item.updateCheck();
-   
+  });
 }
