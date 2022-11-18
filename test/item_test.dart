@@ -24,4 +24,6 @@ main() {
     item.updateCheck();
     expect(item.isChecked, true);
   });
+
+  test('Test couleur', () {});
 }
