@@ -36,5 +36,7 @@ main() {
     expect(item.setColor(), Colors.green);
   });
 
-  test('Test Icon', () {});
+  test('Test Icon', () {
+    Item item = newItem();
+  });
 }
