@@ -19,5 +19,7 @@ main() {
     expect(item.isChecked, false);
   });
 
-  test('Test du changement de check', () {});
+  test('Test du changement de check', () {
+    Item item = newItem();
+  });
 }
