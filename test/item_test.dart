@@ -15,7 +15,7 @@ main() {
     // String name = "Test d'un Item";
     //Item item = Item(name: name);
     Item item = newItem();
-    expect(item.name, name);
+    expect(item.name, "Test d'un Item";);
     expect(item.isChecked, false);
   });
 }
