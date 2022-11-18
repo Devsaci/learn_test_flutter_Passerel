@@ -18,4 +18,6 @@ main() {
     expect(item.name, name);
     expect(item.isChecked, false);
   });
+
+  test('Test du changement de check', () {});
 }
