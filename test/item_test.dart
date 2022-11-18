@@ -25,5 +25,7 @@ main() {
     expect(item.isChecked, true);
   });
 
-  test('Test couleur', () {});
+  test('Test couleur', () {
+    Item item = newItem();
+  });
 }
