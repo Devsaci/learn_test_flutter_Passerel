@@ -1,4 +1,6 @@
 //14. Créer une class de test
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test_passerel/item.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -29,5 +31,6 @@ main() {
   test('Test couleur', () {
     Item item = newItem();
     expect(item.setColor(), Colors.deepOrange);
-  });
+    item.updateCheck();
+   
 }
