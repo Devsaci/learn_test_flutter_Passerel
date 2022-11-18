@@ -38,5 +38,6 @@ main() {
 
   test('Test Icon', () {
     Item item = newItem();
+    expect(item.setIcon(), Icons.check_box_outline_blank);
   });
 }
