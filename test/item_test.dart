@@ -39,5 +39,8 @@ main() {
   test('Test Icon', () {
     Item item = newItem();
     expect(item.setIcon(), Icons.check_box_outline_blank);
+
+    item.updateCheck();
+    expect(item.setIcon(), Icons.check_box);
   });
 }
