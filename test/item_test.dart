@@ -33,6 +33,6 @@ main() {
     expect(item.setColor(), Colors.deepOrange);
 
     item.updateCheck();
-    expect(item.setColor(), Colors.deepOrange);
+    expect(item.setColor(), Colors.green);
   });
 }
