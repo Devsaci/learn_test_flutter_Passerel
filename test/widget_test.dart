@@ -16,7 +16,7 @@ void main() {
     await tester.pumpWidget(baseApp);
 
     //19. chercher un Widget par le texte
-    final withText = find.text("Unit Testing");
-    expect(withText, findsOneWidget);
+    final withText = find.text("Unit Texting");
+    expect(withText, findsNothing);
   });
 }
