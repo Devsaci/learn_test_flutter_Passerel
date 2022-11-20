@@ -14,5 +14,7 @@ void main() {
     //Créer un Widget en test
     //Construire
     await tester.pumpWidget(baseApp);
+
+    //19. chercher un Widget par le texte
   });
 }
