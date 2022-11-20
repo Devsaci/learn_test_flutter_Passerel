@@ -1,5 +1,4 @@
 //14. Créer une class de test
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test_passerel/item.dart';
