@@ -17,5 +17,6 @@ void main() {
 
     //19. chercher un Widget par le texte
     final withText = find.text("Unite");
+    expect(withText, findsOneWidget);
   });
 }
