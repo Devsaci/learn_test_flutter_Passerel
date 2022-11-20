@@ -20,5 +20,6 @@ void main() {
     expect(withText, findsOneWidget);
     //20. Les différents types de recherche
     final withIcon = find.byIcon(Icons.add);
+    expect(withIcon, findsOneWidget);
   });
 }
