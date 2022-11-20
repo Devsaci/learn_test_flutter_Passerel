@@ -18,5 +18,6 @@ void main() {
     //19. chercher un Widget par le texte
     final withText = find.text("Unit Testing");
     expect(withText, findsOneWidget);
+    //20. Les différents types de recherche
   });
 }
