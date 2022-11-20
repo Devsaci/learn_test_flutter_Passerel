@@ -11,6 +11,8 @@ void main() {
   );
 
   testWidgets('Test set', (WidgetTester tester) async {
+    //Créer un Widget en test
+    //Construire
     await tester.pumpWidget(baseApp);
   });
 }
