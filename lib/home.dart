@@ -46,6 +46,7 @@ class _HomeState extends State<Home> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: TextField(
+              key: Key("TextField"),
               controller: controller,
               decoration: const InputDecoration(
                   hintText: "Entrez un élément à ajouter"),
