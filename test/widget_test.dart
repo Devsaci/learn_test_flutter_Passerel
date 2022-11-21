@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_test_passerel/custom_app_bar.dart';
@@ -28,5 +30,6 @@ void main() {
     // expect(typeAppBar, findsOneWidget);
     final typeAppBar = find.byType(AppBar);
     expect(typeAppBar, findsNothing);
+    find.byKey(const Key('FirsTEst'));
   });
 }
