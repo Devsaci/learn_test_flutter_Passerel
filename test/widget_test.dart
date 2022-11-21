@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -19,20 +20,21 @@ void main() {
     await tester.pumpWidget(baseApp);
 
     //19. chercher un Widget par le texte
-    final withText = find.text("Unit Testing");
-    expect(withText, findsOneWidget);
+    // final withText = find.text("Unit Testing");
+    // expect(withText, findsOneWidget);
+    // expect(withText, findsNWidgets(1));
     //20. Les différents types de recherche
-    final withIcon = find.byIcon(Icons.add);
-    expect(withIcon, findsOneWidget);
-    final typeCustomAppBar = find.byType(CustomAppBar);
-    expect(typeCustomAppBar, findsOneWidget);
+    // final withIcon = find.byIcon(Icons.add);
+    // expect(withIcon, findsOneWidget);
+    // final typeCustomAppBar = find.byType(CustomAppBar);
+    // expect(typeCustomAppBar, findsOneWidget);
     // final typeAppBar = find.byType(AppBar);
     // expect(typeAppBar, findsOneWidget);
-    final typeAppBar = find.byType(AppBar);
-    expect(typeAppBar, findsNothing);
+    // final typeAppBar = find.byType(AppBar);
+    // expect(typeAppBar, findsNothing);
     // final byKeyTextField = find.byKey(const Key('TextField'));
     // expect(byKeyTextField, findsOneWidget);
-    final byKeyTestKey = find.byKey(const Key('TestKey'));
-    expect(byKeyTestKey, findsOneWidget);
+    final byKey = find.byKey(const Key('TestKey'));
+    expect(byKey, findsNWidgets(3));
   });
 }
