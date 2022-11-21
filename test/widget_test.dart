@@ -24,7 +24,9 @@ void main() {
     expect(withIcon, findsOneWidget);
     final typeCustomAppBar = find.byType(CustomAppBar);
     expect(typeCustomAppBar, findsOneWidget);
+    // final typeAppBar = find.byType(AppBar);
+    // expect(typeAppBar, findsOneWidget);
     final typeAppBar = find.byType(AppBar);
-    expect(typeAppBar, findsOneWidget);
+    expect(typeAppBar, findsNothing);
   });
 }
