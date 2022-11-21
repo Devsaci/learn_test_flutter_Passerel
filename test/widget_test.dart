@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_test_passerel/custom_app_bar.dart';
 import 'package:flutter_test_passerel/home.dart';
 
 void main() {
@@ -21,5 +22,6 @@ void main() {
     //20. Les différents types de recherche
     final withIcon = find.byIcon(Icons.add);
     expect(withIcon, findsOneWidget);
+    find.byType(CustomAppBar);
   });
 }
