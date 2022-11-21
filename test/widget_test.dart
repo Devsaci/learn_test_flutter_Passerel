@@ -35,6 +35,6 @@ void main() {
     // final byKeyTextField = find.byKey(const Key('TextField'));
     // expect(byKeyTextField, findsOneWidget);
     final byKey = find.byKey(const Key('TestKey'));
-    expect(byKey, findsNWidgets(0));
+    expect(byKey, findsNWidgets(3));
   });
 }
