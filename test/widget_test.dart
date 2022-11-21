@@ -7,7 +7,7 @@ import 'package:flutter_test_passerel/custom_app_bar.dart';
 import 'package:flutter_test_passerel/home.dart';
 
 void main() {
-  const baseApp = MediaQuery(
+  final baseApp = MediaQuery(
     data: MediaQueryData(),
     child: MaterialApp(
       home: Home(),
@@ -35,6 +35,6 @@ void main() {
     // final byKeyTextField = find.byKey(const Key('TextField'));
     // expect(byKeyTextField, findsOneWidget);
     final byKey = find.byKey(const Key('TestKey'));
-    expect(byKey, findsNWidgets(3));
+    expect(byKey, findsNWidgets(0));
   });
 }
