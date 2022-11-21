@@ -22,7 +22,9 @@ void main() {
     //20. Les différents types de recherche
     final withIcon = find.byIcon(Icons.add);
     expect(withIcon, findsOneWidget);
-    final type = find.byType(CustomAppBar);
-    expect(type, findsOneWidget);
+    final typeCustomAppBar = find.byType(CustomAppBar);
+    expect(typeCustomAppBar, findsOneWidget);
+    final typeAppBar = find.byType(AppBar);
+    expect(typeAppBar, findsOneWidget);
   });
 }
