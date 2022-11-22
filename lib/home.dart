@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
     if (controller.text != "") {
       setState(() {
         final item = Item(name: controller.text);
-        controller.text = "";
+        // controller.text = "";
         items.add(item);
       });
     }
