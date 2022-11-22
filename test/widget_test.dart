@@ -64,5 +64,6 @@ void main() {
     await tester.pump();
     final tiles = find.byType(CustomTile);
     expect(tiles, findsNWidgets(4));
+    find.text("Salut");
   });
 }
