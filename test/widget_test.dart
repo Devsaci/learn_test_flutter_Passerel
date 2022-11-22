@@ -60,8 +60,9 @@ void main() {
     await tester.enterText(tf, "Salut");
     final btn = find.byIcon(Icons.add);
     //Tap
-    tester.tap(btn);
+    await tester.tap(btn);
     await tester.pump();
-    find.byType(CustomTile);
+    final tiles = find.byType(CustomTile);
+    expect(tiles, findsNWidgets(4));
   });
 }
