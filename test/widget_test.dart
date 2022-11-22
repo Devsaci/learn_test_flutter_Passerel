@@ -46,9 +46,9 @@ void main() {
     // expect(textField, findsNWidgets(1));
 
     // Entrer du Texte
-    await tester.enterText(textField, "Salut les codeurs");
+    // await tester.enterText(textField, "Salut les codeurs");
     // Error (textField,)
-    // await tester.enterText(find.byType(TextField), "toto");
+    await tester.enterText(find.byType(TextField), "toto");
     // expect(find.text("hi"), findsOneWidget);
   });
 }
