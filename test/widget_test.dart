@@ -7,7 +7,7 @@ import 'package:flutter_test_passerel/custom_app_bar.dart';
 import 'package:flutter_test_passerel/home.dart';
 
 void main() {
-  final baseApp = MediaQuery(
+  const baseApp = MediaQuery(
     data: MediaQueryData(),
     child: MaterialApp(
       home: Home(),
