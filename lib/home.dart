@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: TextField(
-              key: Key("TextField"),
+              key: const Key("TextField"),
               controller: controller,
               decoration: const InputDecoration(
                   hintText: "Entrez un élément à ajouter"),
@@ -56,7 +56,9 @@ class _HomeState extends State<Home> {
           Flexible(
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
-                const Key key = Key("TestKey");
+                // const Key key = Key("TestKey");
+                const Key("TestKey");
+
                 return CustomTile(
                   item: items[index],
                   index: index,
