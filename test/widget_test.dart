@@ -49,6 +49,6 @@ void main() {
     // await tester.enterText(textField, "Salut les codeurs");
     // Error (textField,)
     await tester.enterText(find.byType(TextField), "toto");
-    expect(find.text("toto"), findsOneWidget);
+    expect(find.text("toto"), findsNWidgets(1));
   });
 }
