@@ -33,8 +33,8 @@ void main() {
     //Recherche Key
     // final byKeyTextField = find.byKey(const Key('TextField'));
     // expect(byKeyTextField, findsOneWidget);
-    final byKey = find.byKey(const Key('TestKey'));
-    expect(byKey, findsNothing);
+    // final byKey = find.byKey(const Key('TestKey'));
+    // expect(byKey, findsNothing);
   });
 
 //21. Tester un texte entier
@@ -46,8 +46,9 @@ void main() {
     // expect(textField, findsNWidgets(1));
 
     // Entrer du Texte
-
-    await tester.enterText(find.byType(TextField), "hi");
-    expect(find.text("hi"), findsOneWidget);
+    await tester.enterText(textField, "Salut les codeurs");
+    // Error (textField,)
+    // await tester.enterText(find.byType(TextField), "toto");
+    // expect(find.text("hi"), findsOneWidget);
   });
 }
