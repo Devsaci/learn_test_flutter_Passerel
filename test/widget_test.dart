@@ -24,14 +24,17 @@ void main() {
     // expect(withText, findsOneWidget);
     // expect(withText, findsNWidgets(1));
     //20. Les différents types de recherche
+    //Recherche icone
     // final withIcon = find.byIcon(Icons.add);
     // expect(withIcon, findsOneWidget);
+    //Recherche class
     // final typeCustomAppBar = find.byType(CustomAppBar);
     // expect(typeCustomAppBar, findsOneWidget);
     // final typeAppBar = find.byType(AppBar);
     // expect(typeAppBar, findsOneWidget);
     // final typeAppBar = find.byType(AppBar);
     // expect(typeAppBar, findsNothing);
+    //Recherche Key
     // final byKeyTextField = find.byKey(const Key('TextField'));
     // expect(byKeyTextField, findsOneWidget);
     final byKey = find.byKey(const Key('TestKey'));
@@ -39,4 +42,5 @@ void main() {
   });
 
 //21. Tester un texte entier
+  testWidgets('Test du texte écrit', (WidgetTester tester) async {});
 }
