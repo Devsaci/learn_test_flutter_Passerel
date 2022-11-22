@@ -49,6 +49,8 @@ void main() {
     // await tester.enterText(textField, "Salut les codeurs");
     // Error (textField,)
     await tester.enterText(find.byType(TextField), "toto");
-    expect(find.text("toto"), findsNWidgets(2));
+    expect(find.text("toto"), findsOneWidget);
   });
+
+//22. Tester un tap de bouton
 }
