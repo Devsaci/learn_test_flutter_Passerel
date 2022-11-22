@@ -64,6 +64,7 @@ void main() {
     await tester.pump();
     final tiles = find.byType(CustomTile);
     expect(tiles, findsNWidgets(4));
-    find.text("Salut");
+    final last = find.text("Salut");
+    expect(last, findsOneWidget);
   });
 }
