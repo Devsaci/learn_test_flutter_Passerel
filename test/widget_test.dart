@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_test_passerel/custom_tile.dart';
 import 'package:flutter_test_passerel/home.dart';
 
 void main() {
@@ -61,5 +62,6 @@ void main() {
     //Tap
     tester.tap(btn);
     await tester.pump();
+    find.byType(CustomTile);
   });
 }
