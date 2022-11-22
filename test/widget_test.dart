@@ -55,6 +55,7 @@ void main() {
 //22. Tester un tap de bouton
   testWidgets('test du Tap', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
+    find.byType(TextField);
     final btn = find.byIcon(Icons.add);
     //Tap
     tester.tap(btn);
