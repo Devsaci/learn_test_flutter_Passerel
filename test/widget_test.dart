@@ -53,7 +53,8 @@ void main() {
   });
 
 //22. Tester un tap de bouton
-  testWidgets('test du Tap', ((widgetTester) async {
-    await widgetTester.pumpWidget(baseApp);
-  }));
+  testWidgets('test du Tap', (WidgetTester tester) async {
+    await tester.pumpWidget(baseApp);
+    find.byIcon(Icons.add);
+  });
 }
