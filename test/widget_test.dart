@@ -42,5 +42,7 @@ void main() {
   });
 
 //21. Tester un texte entier
-  testWidgets('Test du texte écrit', (WidgetTester tester) async {});
+  testWidgets('Test du texte écrit', (WidgetTester tester) async {
+    await tester.pumpWidget(baseApp);
+  });
 }
