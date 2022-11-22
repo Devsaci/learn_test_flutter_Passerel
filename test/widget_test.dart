@@ -60,5 +60,6 @@ void main() {
     final btn = find.byIcon(Icons.add);
     //Tap
     tester.tap(btn);
+    await tester.pump();
   });
 }
