@@ -43,6 +43,6 @@ void main() {
 
     final textField = find.byType(TextField);
     //expect(textField, findsOneWidget);
-    expect(textField, findsNWidgets(0));
+    expect(textField, findsNWidgets(1));
   });
 }
