@@ -76,7 +76,9 @@ void main() {
     expect(tile, findsOneWidget);
 
     Offset offset = const Offset(-500, 0);
+    //Swipe
     await tester.drag(tile, offset);
+    //Attente du setState et de l'animation
     await tester.pumpAndSettle();
     final titles = find.byType(CustomTile);
     expect(titles, findsNWidgets(2));
