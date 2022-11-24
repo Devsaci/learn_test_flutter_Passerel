@@ -3,8 +3,8 @@ import 'package:test/test.dart';
 
 void main() {
 //Trouver nos éléments dans l'app
-  find.byValueKey("FirstTest");
-  find.byTooltip("Add Item");
+  final textFild = find.byValueKey("FirstTest");
+  final button = find.byTooltip("Add Item");
 
   //Crée un Driver
   late FlutterDriver flutterDriver;
