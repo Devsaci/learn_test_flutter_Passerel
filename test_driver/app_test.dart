@@ -11,5 +11,5 @@ void main() {
     await flutterDriver.waitUntilFirstFrameRasterized();
   });
   //Supprime à la fin du test
-  tearDownAll(() {});
+  tearDownAll(() async {});
 }
