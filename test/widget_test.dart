@@ -74,5 +74,7 @@ void main() {
 
     final tile = find.text("Integration testing");
     expect(tile, findsOneWidget);
+
+    const Offset(-500, 0);
   });
 }
