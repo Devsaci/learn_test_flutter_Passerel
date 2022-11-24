@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 void main() {
 //Trouver nos éléments dans l'app
   find.byValueKey("FirstTest");
-  find.byTooltip("message");
+  find.byTooltip("Add Item");
 
   //Crée un Driver
   late FlutterDriver flutterDriver;
