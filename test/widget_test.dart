@@ -69,5 +69,7 @@ void main() {
   });
 
   //23. Tester un Swipe (ou drag)
-  testWidgets('Test du Dismiss', (WidgetTester tester) async {});
+  testWidgets('Test du Dismiss', (WidgetTester tester) async {
+    find.text("Unit Testing");
+  });
 }
