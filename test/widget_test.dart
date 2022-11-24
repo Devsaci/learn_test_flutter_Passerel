@@ -72,7 +72,7 @@ void main() {
   testWidgets('Test du Dismiss', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
 
-    final tile = find.text("Widget Testing");
+    final tile = find.text("Integration testing");
     expect(tile, findsOneWidget);
   });
 }
