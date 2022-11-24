@@ -71,6 +71,7 @@ void main() {
   //23. Tester un Swipe (ou drag)
   testWidgets('Test du Dismiss', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
-    find.text("Unit Testing");
+    final tile = find.text("Unit Testing");
+    expect(tile, findsOneWidget);
   });
 }
