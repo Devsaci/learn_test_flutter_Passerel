@@ -7,7 +7,7 @@ void main() {
 
   // Mettre en place ce Driver
   setUpAll(() async {
-    FlutterDriver.connect();
+    await FlutterDriver.connect();
   });
   //Supprime à la fin du test
 }
