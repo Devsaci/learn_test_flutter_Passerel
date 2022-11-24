@@ -78,5 +78,6 @@ void main() {
     Offset offset = const Offset(-500, 0);
     await tester.drag(tile, offset);
     await tester.pumpAndSettle();
+    find.byType(CustomTile);
   });
 }
