@@ -1,17 +1,15 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:learn_test_flutter/custom_app_bar.dart';
-import 'package:learn_test_flutter/custom_tile.dart';
-import 'package:learn_test_flutter/home.dart';
- 
+import 'package:flutter_test_passerel/custom_tile.dart';
+import 'package:flutter_test_passerel/home.dart';
+
 void main() {
-  final baseApp = MediaQuery(
-      data: const MediaQueryData(),
+  const baseApp = MediaQuery(
+      data: MediaQueryData(),
       child: MaterialApp(
         home: Home(),
       ));
- 
+
   testWidgets('Test set', (WidgetTester tester) async {
     //Créer un Widget en test
     //Construire
@@ -29,7 +27,7 @@ void main() {
     final byKey = find.byKey(const Key('TestKey'));
     expect(byKey, findsNWidgets(3));
   });
- 
+
   testWidgets('Test du texte écrit', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
     final textField = find.byType(TextField);
@@ -38,7 +36,7 @@ void main() {
     await tester.enterText(textField, "Salut les codeurs");
     expect(find.text("Salut les codeurs"), findsOneWidget);
   });
- 
+
   testWidgets('Test du tap', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
     final tf = find.byType(TextField);
@@ -53,7 +51,7 @@ void main() {
     final last = find.text("Salut");
     expect(last, findsOneWidget);
   });
- 
+
   testWidgets('Test du Dismiss', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
     final tile = find.text("Unit Testing");
