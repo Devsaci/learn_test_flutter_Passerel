@@ -1,86 +1,122 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_test_passerel/custom_tile.dart';
-import 'package:flutter_test_passerel/home.dart';
-
+import 'package:learn_test_flutter/custom_app_bar.dart';
+import 'package:learn_test_flutter/custom_tile.dart';
+import 'package:learn_test_flutter/home.dart';
+ 
 void main() {
-  const baseApp = MediaQuery(
-    data: MediaQueryData(),
-    child: MaterialApp(
-      home: Home(),
-    ),
-  );
-
+  final baseApp = MediaQuery(
+      data: const MediaQueryData(),
+      child: MaterialApp(
+        home: Home(),
+      ));
+ 
   testWidgets('Test set', (WidgetTester tester) async {
     //Créer un Widget en test
     //Construire
     await tester.pumpWidget(baseApp);
-
-    //19. chercher un Widget par le texte
-    // final withText = find.text("Unit Testing");
-    // expect(withText, findsOneWidget);
-    // expect(withText, findsNWidgets(1));
-    //20. Les différents types de recherche
+    //Recherche texte
+    final withText = find.text("Unit Testing");
+    expect(withText, findsOneWidget);
     //Recherche icone
-    // final withIcon = find.byIcon(Icons.add);
-    // expect(withIcon, findsOneWidget);
+    final withIcon = find.byIcon(Icons.add);
+    expect(withIcon, findsOneWidget);
     //Recherche class
-    // final typeCustomAppBar = find.byType(CustomAppBar);
-    // expect(typeCustomAppBar, findsOneWidget);
-    // final typeAppBar = find.byType(AppBar);
-    // expect(typeAppBar, findsOneWidget);
-    // final typeAppBar = find.byType(AppBar);
-    // expect(typeAppBar, findsNothing);
+    final type = find.byType(AppBar);
+    expect(type, findsNothing);
     //Recherche Key
-    // final byKeyTextField = find.byKey(const Key('TextField'));
-    // expect(byKeyTextField, findsOneWidget);
-    // final byKey = find.byKey(const Key('TestKey'));
-    // expect(byKey, findsNothing);
+    final byKey = find.byKey(const Key('TestKey'));
+    expect(byKey, findsNWidgets(3));
   });
-
-//21. Tester un texte entier
+ 
   testWidgets('Test du texte écrit', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
-
-    // final textField = find.byType(TextField);
-    //expect(textField, findsOneWidget);
-    // expect(textField, findsNWidgets(1));
-
-    // Entrer du Texte
-    // await tester.enterText(textField, "Salut les codeurs");
-    // Error (textField,)
-    await tester.enterText(find.byType(TextField), "toto");
-    expect(find.text("toto"), findsOneWidget);
+    final textField = find.byType(TextField);
+    expect(textField, findsOneWidget);
+    //Entrer du texte
+    await tester.enterText(textField, "Salut les codeurs");
+    expect(find.text("Salut les codeurs"), findsOneWidget);
   });
-
-//22. Tester un tap de bouton
-  testWidgets('test du Tap', (WidgetTester tester) async {
+ 
+  testWidgets('Test du tap', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
     final tf = find.byType(TextField);
     await tester.enterText(tf, "Salut");
     final btn = find.byIcon(Icons.add);
     //Tap
     await tester.tap(btn);
+    //Attente du SetState
     await tester.pump();
     final tiles = find.byType(CustomTile);
     expect(tiles, findsNWidgets(4));
     final last = find.text("Salut");
     expect(last, findsOneWidget);
   });
-
-  //23. Tester un Swipe (ou drag)
+ 
   testWidgets('Test du Dismiss', (WidgetTester tester) async {
     await tester.pumpWidget(baseApp);
-
-    final tile = find.text("Integration testing");
+    final tile = find.text("Unit Testing");
     expect(tile, findsOneWidget);
-
     Offset offset = const Offset(-500, 0);
     //Swipe
     await tester.drag(tile, offset);
     //Attente du setState et de l'animation
     await tester.pumpAndSettle();
-    final titles = find.byType(CustomTile);
-    expect(titles, findsNWidgets(2));
+    final tiles = find.byType(CustomTile);
+    expect(tiles, findsNWidgets(2));
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility that Flutter provides. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter_test/flutter_test.dart';
+
+// import 'package:flutter_test_passerel/main.dart';
+
+//void main() {
+  // testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+//     // Build our app and trigger a frame.
+//     await tester.pumpWidget(const MyApp());
+
+//     // Verify that our counter starts at 0.
+//     expect(find.text('0'), findsOneWidget);
+//     expect(find.text('1'), findsNothing);
+
+//     // Tap the '+' icon and trigger a frame.
+//     await tester.tap(find.byIcon(Icons.add));
+//     await tester.pump();
+
+//     // Verify that our counter has incremented.
+//     expect(find.text('0'), findsNothing);
+//     expect(find.text('1'), findsOneWidget);
+//   });
+// }
+
+
