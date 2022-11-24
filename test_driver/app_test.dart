@@ -6,6 +6,6 @@ void main() {
   late FlutterDriver flutterDriver;
 
   // Mettre en place ce Driver
-
+  setUpAll(() async {});
   //Supprime à la fin du test
 }
