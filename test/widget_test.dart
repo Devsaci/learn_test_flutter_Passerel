@@ -67,4 +67,7 @@ void main() {
     final last = find.text("Salut");
     expect(last, findsOneWidget);
   });
+
+  //23. Tester un Swipe (ou drag)
+  testWidgets('Test du Dismiss', (WidgetTester tester) async {});
 }
