@@ -7,7 +7,8 @@ void main() {
 
   // Mettre en place ce Driver
   setUpAll(() async {
-    await FlutterDriver.connect();
+    flutterDriver = await FlutterDriver.connect();
+    await flutterDriver.waitUntilFirstFrameRasterized();
   });
   //Supprime à la fin du test
 }
