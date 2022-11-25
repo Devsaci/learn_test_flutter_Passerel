@@ -41,8 +41,11 @@ void main() {
   // TEST in Terminal : flutter driver --target=test_driver/app.dart
 
   test("Test du scroll de ma liste", () async {
-    find.byValueKey("List");
+    //Recup listView
+    final list = find.byValueKey("List");
     //Recup dernier élément
-    find.text('Integration testing');
+    final lastItem = find.text('Integration testing');
+
+    await flutterDriver.scrollUntilVisible(list, lastItem);
   });
 }
