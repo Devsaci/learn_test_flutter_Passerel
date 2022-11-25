@@ -39,4 +39,6 @@ void main() {
   });
 
   // TEST in Terminal : flutter driver --target=test_driver/app.dart
+
+  test("Test du scroll de ma liste", () async {});
 }
