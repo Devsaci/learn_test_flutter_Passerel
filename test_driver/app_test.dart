@@ -33,5 +33,8 @@ void main() {
 
     //Rechercher la tile avec Salut dedans;
     final tile = find.text('Salut');
+
+    //Attendre le résultat
+    expect(await flutterDriver.getText(tile), 'Salut');
   });
 }
