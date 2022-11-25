@@ -21,5 +21,7 @@ void main() {
 
   //Commencer nos Tests;
 //29. premier test
-  test('Ajouter un Item à la liste', () async {});
+  test('Ajouter un Item à la liste', () async {
+    flutterDriver.enterText('Salut');
+  });
 }
