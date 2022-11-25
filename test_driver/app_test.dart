@@ -27,5 +27,8 @@ void main() {
 
     //Entrer texte
     await flutterDriver.enterText('Salut');
+
+    // Appui sur bouton pour ajouter Item;
+    await flutterDriver.tap(button);
   });
 }
