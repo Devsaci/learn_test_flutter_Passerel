@@ -42,5 +42,7 @@ void main() {
 
   test("Test du scroll de ma liste", () async {
     find.byValueKey("List");
+    //Recup dernier élément
+    find.text('Integration testing');
   });
 }
