@@ -47,5 +47,6 @@ void main() {
     final lastItem = find.text('Integration testing');
 
     await flutterDriver.scrollUntilVisible(list, lastItem);
+    expect(await flutterDriver.getText(lastItem), 'Integration testing');
   });
 }
