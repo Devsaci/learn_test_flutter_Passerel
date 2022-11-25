@@ -37,4 +37,6 @@ void main() {
     //Attendre le résultat
     expect(await flutterDriver.getText(tile), 'Salut');
   });
+
+  // TEST in Terminal : flutter driver --target=test_driver/app.dart
 }
