@@ -30,5 +30,8 @@ void main() {
 
     // Appui sur bouton pour ajouter Item;
     await flutterDriver.tap(button);
+
+    //Rechercher la tile avec Salut dedans;
+    final tile = find.text('Salut');
   });
 }
