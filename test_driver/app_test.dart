@@ -57,9 +57,9 @@ void main() {
     //Recup dernier élément
     final lastItem = find.text('Integration testing');
 
-    flutterDriver.traceAction(() async {});
-
-    await flutterDriver.scrollUntilVisible(list, lastItem, dyScroll: 100);
-    expect(await flutterDriver.getText(lastItem), 'Integration testing');
+    flutterDriver.traceAction(() async {
+      await flutterDriver.scrollUntilVisible(list, lastItem, dyScroll: 100);
+      expect(await flutterDriver.getText(lastItem), 'Integration testing');
+    });
   });
 }
