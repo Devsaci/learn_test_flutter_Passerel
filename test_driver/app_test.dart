@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
 
@@ -59,7 +58,7 @@ void main() {
     final lastItem = find.text('Integration testing');
 
     final timeline = await flutterDriver.traceAction(() async {
-      await flutterDriver.scrollUntilVisible(list, lastItem, dyScroll: 100);
+      await flutterDriver.scrollUntilVisible(list, lastItem, dyScroll: 50);
       expect(await flutterDriver.getText(lastItem), 'Integration testing');
     });
 
@@ -67,4 +66,7 @@ void main() {
     await summary.writeTimelineToFile('Resultats de notre scroll',
         pretty: true);
   });
+
+  //  Test in Terminal : flutter driver --target=test_driver/app.dart
+  //00:03 +2: (tearDownAll) 00:03 +2: All tests passed!
 }

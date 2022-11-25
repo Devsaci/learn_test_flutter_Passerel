@@ -1,5 +1,3 @@
-// ignore_for_file: unused_local_variable
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test_passerel/custom_app_bar.dart';
 import 'package:flutter_test_passerel/custom_tile.dart';
