@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
 
@@ -62,6 +63,8 @@ void main() {
       expect(await flutterDriver.getText(lastItem), 'Integration testing');
     });
 
-    TimelineSummary.summarize(timeline);
+    final summary = TimelineSummary.summarize(timeline);
+    await summary.writeTimelineToFile('Resultats de notre scroll',
+        pretty: true);
   });
 }
