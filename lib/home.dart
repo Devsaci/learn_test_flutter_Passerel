@@ -55,6 +55,7 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 50),
           Flexible(
             child: ListView.builder(
+              key: const Key("List"),
               itemBuilder: (BuildContext context, int index) {
                 // const Key key = Key("TestKey");
                 const Key("TestKey");
