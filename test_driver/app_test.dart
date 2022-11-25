@@ -49,4 +49,5 @@ void main() {
     await flutterDriver.scrollUntilVisible(list, lastItem);
     expect(await flutterDriver.getText(lastItem), 'Integration testing');
   });
+  // TEST in Terminal : flutter driver --target=test_driver/app.dart
 }
