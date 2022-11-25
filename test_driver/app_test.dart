@@ -40,14 +40,26 @@ void main() {
 
   // TEST in Terminal : flutter driver --target=test_driver/app.dart
 
-  test("Test du scroll de ma liste", () async {
+  // test("Test du scroll de ma liste", () async {
+  //   //Recup listView
+  //   final list = find.byValueKey("List");
+  //   //Recup dernier élément
+  //   final lastItem = find.text('Integration testing');
+
+  //   await flutterDriver.scrollUntilVisible(list, lastItem);
+  //   expect(await flutterDriver.getText(lastItem), 'Integration testing');
+  // });
+  // TEST in Terminal : flutter driver --target=test_driver/app.dart
+
+  test("Test du scroll de ma liste avec performance", () async {
     //Recup listView
     final list = find.byValueKey("List");
     //Recup dernier élément
     final lastItem = find.text('Integration testing');
 
-    await flutterDriver.scrollUntilVisible(list, lastItem);
+    flutterDriver.traceAction(() async {});
+
+    await flutterDriver.scrollUntilVisible(list, lastItem, dyScroll: 100);
     expect(await flutterDriver.getText(lastItem), 'Integration testing');
   });
-  // TEST in Terminal : flutter driver --target=test_driver/app.dart
 }
